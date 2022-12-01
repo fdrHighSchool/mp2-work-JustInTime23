@@ -3,35 +3,36 @@
 
 1. Rewrite the following nested `if()` statements in a single line:
   ```
-  if (year % 4 == 0) {
-      if (year % 100 != 0) {
-        // DO STUFF
-      } // end inner if statement
-   } // end outer if statement
+  if(year % 4 == 0 || year % 100 != 0 || year % 400 == 0) {
+    isit = true;
+  }
+  else {
+    isit = false;
+    }
+  return(isit);
+  }
   ```
-  * **YOUR WRITING HERE**
 
-
-2. Label each as either correct or incorrect syntax. If incorrect, rewrite below:
+//2. Label each as either correct or incorrect syntax. If incorrect, rewrite below:
   * if (x == y) {
 
-    * **YOUR WRITING HERE**
+    //good
 
   * if [x == 10] {
 
-    * **YOUR WRITING HERE**
+    //NO if (x == 10) {
 
   * if x = 10 then {
 
-    * **YOUR WRITING HERE**
+    //NO if (x == 10) {
 
   * if (x equals 42) {
 
-    * **YOUR WRITING HERE**
+    //NO if (x == 42) {
 
   * if (x => y) {
 
-    * **YOUR WRITING HERE**
+    //NO (x >= y) {
 
 
 3. Fix the error in the code below:
@@ -46,3 +47,9 @@
   ```
 
   * **YOUR WRITING HERE**
+Scanner console = new Scanner(System.in);
+  System.out.print("What is your favorite color? ");
+  String name = console.nextLine();
+  if (name.equals("blue")) {
+      System.out.println("Mine, too!");
+  }
