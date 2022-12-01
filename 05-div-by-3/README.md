@@ -6,4 +6,28 @@ Outline an algorithm to determine whether or not a number is prime.
 Think of the following method header:
 `public static boolean isPrime(int num)`
 
-  * **YOUR WRITING HERE**
+  * class Main {
+  public static void main(String[] args) {
+    String initialNum = "9";
+    int endNum = initialNum.indexOf(0);
+    int result = 0;
+    //continue to divide by continuously smaller digits w/ %, if index returns -1 (cannot find a number anymore) stop searching
+    while (initialNum.indexOf(-1) != -1) {
+      result += initialNum.charAt(-1);
+      System.out.print(result);
+    }
+    /*
+    int finalvalue1 = initialNum % 10;
+    int finalvalue2 = initialNum % 1; 
+    int grandfinale = finalvalue1 + finalvalue2;
+    */
+    boolean divby3;
+    if (result % 3 == 0) {
+      divby3 = true;
+    }
+    else {
+      divby3 = false;
+    }
+    System.out.println(divby3);
+  }
+}
