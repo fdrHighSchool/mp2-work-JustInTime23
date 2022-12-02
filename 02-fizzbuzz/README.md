@@ -22,3 +22,19 @@
 
 3. What does DeMorgan's state and how did you prove it for the case above?
   * The inverse of OR is AND (and vice versa). This is proved when running a NOT or (and) or code (or NOT and [and] and code) and comparing the results.
+
+class Main {
+  public static void main(String[] args) {
+    System.out.println("hard coded");
+    double number = 15;
+    if(number % 3 == 0) {
+      System.out.print("Fizz");
+    }
+    if(number % 5 == 0) {
+      System.out.print("Buzz");
+    }
+    if(number % 3 != 0 && number % 5 != 0) {
+      System.out.println(number);
+    }
+  }
+}
